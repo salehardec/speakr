@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - Speakr</title>
+    <title>{{ title }} - Спеакр</title>
     <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -88,9 +88,9 @@
         }
 
         html {
-            background-color: var(--bg-primary); 
-            color: var(--text-primary); 
-            transition: background-color 0.3s, color 0.3s; 
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s, color 0.3s;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
         html, body { height: 100%; margin: 0; }
@@ -110,7 +110,7 @@
         <main class="flex-grow flex items-center justify-center">
             <div class="w-full max-w-md bg-[var(--bg-secondary)] p-8 rounded-xl shadow-lg border border-[var(--border-primary)]">
                 <h2 class="text-2xl font-semibold text-[var(--text-primary)] mb-6 text-center">Login</h2>
-                
+
                 {% with messages = get_flashed_messages(with_categories=true) %}
                     {% if messages %}
                         {% for category, message in messages %}
@@ -120,10 +120,10 @@
                         {% endfor %}
                     {% endif %}
                 {% endwith %}
-                
+
                 <form method="POST" action="{{ url_for('login') }}">
                     {{ form.hidden_tag() }}
-                    
+
                     <div class="mb-4">
                         {{ form.email.label(class="block text-sm font-medium text-[var(--text-secondary)] mb-1") }}
                         {% if form.email.errors %}
@@ -137,7 +137,7 @@
                             {{ form.email(class="mt-1 block w-full rounded-md border-[var(--border-secondary)] shadow-sm focus:border-[var(--border-focus)] focus:ring-[var(--ring-focus)] focus:ring-opacity-50 bg-[var(--bg-input)] text-[var(--text-primary)]") }}
                         {% endif %}
                     </div>
-                    
+
                     <div class="mb-6">
                         {{ form.password.label(class="block text-sm font-medium text-[var(--text-secondary)] mb-1") }}
                         {% if form.password.errors %}
@@ -151,15 +151,15 @@
                             {{ form.password(class="mt-1 block w-full rounded-md border-[var(--border-secondary)] shadow-sm focus:border-[var(--border-focus)] focus:ring-[var(--ring-focus)] focus:ring-opacity-50 bg-[var(--bg-input)] text-[var(--text-primary)]") }}
                         {% endif %}
                     </div>
-                    
+
                     <div class="flex items-center mb-6">
                         {{ form.remember(class="h-4 w-4 text-[var(--text-accent)] focus:ring-[var(--ring-focus)] border-[var(--border-secondary)] rounded") }}
                         {{ form.remember.label(class="ml-2 block text-sm text-[var(--text-secondary)]") }}
                     </div>
-                    
+
                     <div class="flex flex-col space-y-4">
                         {{ form.submit(class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-[var(--text-button)] bg-[var(--bg-button)] hover:bg-[var(--bg-button-hover)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--border-focus)]") }}
-                        
+
                         <div class="text-center text-sm text-[var(--text-muted)]">
                             <span>Don't have an account?</span>
                             <a href="{{ url_for('register') }}" class="font-medium text-[var(--text-accent)] hover:underline">Register here</a>

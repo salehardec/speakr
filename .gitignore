@@ -86,3 +86,86 @@ __pypackages__/
 
 # Docker
 docker-compose.override.yml
+
+# Операционные системы
+.DS_Store
+Thumbs.db
+
+# Каталоги зависимостей
+node_modules/
+
+# Сборочные и временные директории
+/dist
+/build
+/.cache
+/.temp
+/public
+
+# Логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# Кэш инструментов
+.nyc_output/
+coverage/
+lib-cov/
+bower_components/
+jspm_packages/
+web_modules/
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+.parcel-cache
+.cache
+.next
+.nuxt
+out
+.vuepress/dist
+.docusaurus
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+
+# Конфиги и временные файлы
+*.tsbuildinfo
+.npm
+.eslintcache
+.stylelintcache
+.yarn-integrity
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE и редакторы
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Прочее
+*.pid
+*.seed
+*.pid.lock
+*.tgz
+package-lock.json
+yarn.lock
+size-plugin.json
+size-plugin-ssr.json
+

@@ -2,6 +2,9 @@ services:
   speakr:
     image: learnedmachine/speakr:latest
     container_name: speakr
+    build:
+      context: .
+      dockerfile: Dockerfile
     restart: unless-stopped
     ports:
       - "9001:8899"
@@ -10,8 +13,8 @@ services:
     volumes:
       - ./speakr/uploads:/data/uploads
       - ./speakr/instance:/data/instance
-    depends_on:
-      - whisper-asr
+    #depends_on:
+    #  - whisper-asr
     networks:
       - speakr-network
 
