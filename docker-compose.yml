@@ -1,0 +1,20 @@
+services:
+  speakr:
+    image: learnedmachine/speakr:latest
+    container_name: speakr
+    restart: unless-stopped
+    ports:
+      - "9001:8899"
+    env_file:
+      - .env
+    volumes:
+      - ./speakr/uploads:/data/uploads
+      - ./speakr/instance:/data/instance
+    depends_on:
+      - whisper-asr
+    networks:
+      - speakr-network
+
+networks:
+  speakr-network:
+    driver: bridge
